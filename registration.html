@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-teal-800 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-teal-800 text-black py-6">
+        <h1 class="text-3xl font-bold text-center">Registration</h1>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="container mx-auto p-1 grid grid-cols-9 md:grid-cols-4 gap-8">
+
+        <!-- Sidebar / Navigation Menu -->
+        <nav class="bg-green-100 p-4 shadow-lg rounded-md">
+            <ul class="space-y-4">
+                <li><a href="home.html" class="text-black text-xl hover:bg-blue-300 py-2 px-4 rounded">Home</a></li>
+                <li><a href="about.html" class="text-black text-xl hover:bg-blue-300 py-2 px-4 rounded">About</a></li>
+                <li><a href="geleri.html" class="text-black text-xl hover:bg-blue-300 py-2 px-4 rounded">portofolio</a></li>
+                <li><a href="calcolator.html" class="text-black text-xl hover:bg-blue-300 py-2 px-4 rounded">Calcolator</a></li>
+                <li><a href="registration.html" class="text-black text-xl hover:bg-blue-300 py-2 px-4 rounded">Registration</a></li>
+            </ul>
+        </nav>
+
+         <!-- Main Content Section -->
+         <main class="col-span-2 bg-green-100 p-6 shadow-lg rounded-md">
+            <h1 class="text-2xl font-semibold mb-4">Regisration Form</h1>
+            <img src="Aaldi135.jpeg" alt="Coba Coba" class="w-full h-auto rounded-md mb-4">
+            <p class="text-lg">
+                Hello! I'm Renaldi. I come from Kupang/East Nusa Tenggara. I study at Unai, and I work as a grounds on campus to meet my college needs.
+            </p>
+        </main>
+
+        <!-- Aside Section -->
+        <main class="bg-green-100 p-4 shadow-lg rounded-md md">
+            <h2 class="text-xl semibold mb-2">Registration Form</h2>
+            
+            <!-- Form -->
+            <form action="#" class="space-y-4">
+                <div>
+                    <label for="fullName" class="block text-sm font-medium">Name:</label>
+                    <input type="text" id="fullName" name="fullName" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-500">
+                </div>
+                <div>
+                    <label for="phone" class="block text-sm font-medium">Phone:</label>
+                    <input type="tel" id="phone" name="phone" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-500">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium">Email:</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-500">
+                </div>
+                <div>
+                    <label for="Password" class="block text-sm font-medium">Password:</label>
+                    <input type="text" id="Password" name="Password" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-500">
+                </div>
+                <button type="submit" class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600">
+                    Register
+                </button>
+            </form>
+            <p class="mt-4">
+                Already have an account? <a href="login.html" class="text-teal-500 hover:text-teal-700">Login</a>
+            </p>
+            <p>
+                Forgot password? <a href="forgotPassword.html" class="text-teal-500 hover:text-teal-700">Reset Password</a>
+            </p>
+        </main>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-teal-800 text-black text-center py-4 mt-8">
+        <p>&copy; 2024 Renaldi AFT</p>
+    </footer>
+
+</body>
+</html>

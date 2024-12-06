@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-teal-800 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-teal-800 text-black p-6">
+        <h1 class="text-3xl font-bold text-center">Calcolator</h1>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="container mx-auto p-1 grid grid-cols-9 md:grid-cols-4 gap-8">
+
+      <!-- Sidebar / Navigation Menu -->
+      <nav class="bg-green-100 p-4 shadow-lg rounded-md">
+        <ul class="space-y-4">
+            <li><a href="home.html" class="text-black text-xl hover:bg-blue-300 py-2 px-4 rounded">Home</a></li>
+            <li><a href="about.html" class="text-black text-xl hover:bg-blue-300 py-2 px-4 rounded">About</a></li>
+            <li><a href="geleri.html" class="text-black text-xl hover:bg-blue-300 py-2 px-4 rounded">portofolio</a></li>
+            <li><a href="calcolator.html" class="text-black text-xl hover:bg-blue-300 py-2 px-4 rounded">Calcolator</a></li>
+            <li><a href="registration.html" class="text-black text-xl hover:bg-blue-300 py-2 px-4 rounded">Registration</a></li>
+        </ul>
+    </nav>
+
+        <!-- Calculator Section -->
+        <main class="col-span-2 bg-green-100 p-6 shadow-lg rounded-md">
+            <h2 class="text-2xl font-semibold mb-4 text-center">Calculator</h2>
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <!-- Display -->
+                <div id="display" class="text-right text-xl bg-gray-100 p-2 rounded mb-4">
+                    0
+                </div>
+                <!-- Buttons -->
+                <div class="grid grid-cols-4 gap-2">
+                    <button class="bg-green-500 text-white p-3 rounded" onclick="press('(')">(</button>
+                    <button class="bg-green-500 text-white p-3 rounded" onclick="press(')')">)</button>
+                    <button class="bg-green-500 text-white p-3 rounded" onclick="press('%')">%</button>
+                    <button class="bg-red-500 text-white p-3 rounded" onclick="clearDisplay()">C</button>
+
+                    <button class="bg-green-500 text-white p-3 rounded" onclick="press('7')">7</button>
+                    <button class="bg-green-500 text-white p-3 rounded" onclick="press('8')">8</button>
+                    <button class="bg-green-500 text-white p-3 rounded" onclick="press('9')">9</button>
+                    <button class="bg-green-500 text-white p-3 rounded" onclick="press('/')">/</button>
+
+                    <button class="bg-green-500 text-white p-3 rounded" onclick="press('4')">4</button>
+                    <button class="bg-green-500 text-white p-3 rounded" onclick="press('5')">5</button>
+                    <button class="bg-green-500 text-white p-3 rounded" onclick="press('6')">6</button>
+                    <button class="bg-green-500 text-white p-3 rounded" onclick="press('*')">*</button>
+
+                    <button class="bg-green-500 text-white p-3 rounded" onclick="press('1')">1</button>
+                    <button class="bg-green-500 text-white p-3 rounded" onclick="press('2')">2</button>
+                    <button class="bg-green-500 text-white p-3 rounded" onclick="press('3')">3</button>
+                    <button class="bg-green-500 text-white p-3 rounded" onclick="press('-')">-</button>
+
+                    <button class="bg-green-500 text-white p-3 rounded" onclick="press('0')">0</button>
+                    <button class="bg-green-500 text-white p-3 rounded" onclick="press('.')">.</button>
+                    <button class="bg-green-500 text-white p-3 rounded col-span-2" onclick="press('+')">+</button>
+                    <button class="col-span-4 bg-blue-500 text-white p-3 rounded" onclick="calculate()">=</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Aside Section -->
+        <main class="bg-green-100 p-4 shadow-lg rounded-md">
+            <h2 class="text-xl font-semibold mb-2">Motivation</h2>
+            <p class="text-lg">
+                "Believe in yourself. You have the power to turn your dreams into reality" <br>
+                <span class="text-sm">Renaldi AFT</span>
+            </p>
+        </aside>
+    </div>
+
+    <!-- Calculator Script -->
+    <script>
+        let expression = '';
+
+        function press(value) {
+            expression += value;
+            updateDisplay();
+        }
+
+        function calculate() {
+            try {
+                let result = eval(expression);
+                expression = result.toString();
+                updateDisplay();
+            } catch {
+                expression = '';
+                alert('Invalid Expression!');
+                updateDisplay();
+            }
+        }
+
+        function clearDisplay() {
+            expression = '';
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            document.getElementById('display').innerText = expression || '0';
+        }
+    </script>
+
+    <!-- Footer Section -->
+    <footer class="bg-teal-800 text-black text-center py-4 mt-8">
+        <p>&copy; 2024 Renaldi AFT</p>
+    </footer>
+
+</body>
+</html>
